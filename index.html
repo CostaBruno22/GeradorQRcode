@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Gerador QRcode</title>
+</head>
+
+<body>
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="/assets/audio/classicPianoBackground.mp3" type="audio/mpeg">
+        <source src="/assets/audio/classicPianoBackground.ogg" type="audio/ogg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <section>
+        <div class="logo">
+            <img src="/assets/images/BrcLogo.png" alt="Logo">
+        </div>
+        <div class="row">
+            <input type="color" class="light" value="#F8F4EC">
+            <input type="color" class="dark" value="#3D3B40">
+            <select class="sizes">
+                <option value="100">100x100</option>
+                <option value="200">200x200</option>
+                <option value="300">300x300</option>
+                <option selected value="400">400x400</option>
+                <option value="500">500x500</option>
+                <option value="600">600x600</option>
+                <option value="700">700x700</option>
+                <option value="800">800x800</option>
+                <option value="900">900x900</option>
+                <option value="1000">1000x1000</option>
+            </select>
+        </div>
+        <input type="text" class="qr-text" placeholder="Adicione Texto do QR">
+        <div id="qr-code"></div>
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRcode">
+                <span>Download</span>
+                <img src="/assets/images/download.svg" alt="">
+            </a>
+            <button class="btn share-btn">
+                <span>Compartilhar</span>
+                <img src="/assets/images/share.svg" alt="">
+            </button>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
